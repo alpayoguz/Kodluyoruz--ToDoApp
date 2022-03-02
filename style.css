@@ -18,18 +18,26 @@
     padding:2rem 0;
 }
 
+#content-list{
+    
+}
+
 #content-form{
     display: flex;
     justify-content: center;
 
 }
 
-#content-text{
+#content-input{
     line-height: 1.5rem;
     width: 20rem;
     border: 1px solid #f9f9f9;
     color: #333;
+    background-color: white;
+}
+#content-input:focus{
     background-color: #f3f3f3;
+    color: #333;
 }
 
 #content-button{
@@ -39,15 +47,100 @@
     cursor: pointer;
     border-radius: 5px;
     margin-left: 5px;
+    background-color: white;
 }
 
-#content-list >li{
-   padding: 0.3rem 0;
-   font-size: 1.2rem;
-   text-transform: capitalize;
-   box-sizing: border-box;
-   padding-left: 5rem;
+#content-button:hover{
+    color: orange;
 }
 
+.to-do-div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    transition: all 0.5s ease;
+}
 
+.complete-btn, .delete-btn{
+    padding: 0.5rem 1rem;
+    margin-left: 0.2rem;
+    border: 0.5px solid wheat;
+    cursor: pointer;
+}
+
+.complete-btn{
+    background-color: green;
+    color: white;
+    border-radius: 20px;    
+}
+
+.delete-btn{
+    background-color: red;
+    color: white;
+    border-radius: 20px;
+ 
+}
+
+.to-do-li{
+    font-size: 1.2rem;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    margin-left: 1rem;
+    flex-basis: 60%;
+    flex: 1 ;
+    min-width: 50%;
+    word-wrap: break-word;
+}
+
+.line-completed{
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.opacity-completed{
+    opacity: 0.5;
+}
+
+.fall{
+    opacity: 0;
+}
+
+/* filter */
+select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    box-shadow: none;
+    appearance: none;
+    border: none;
+    outline: none;
+    color: orange;
+    height: 1.9rem;
+    width: 9rem;
+    cursor: pointer;
+    padding: 0 1rem;
+}
+
+.select{
+    margin-left: 1rem;
+    position: relative;
+    overflow: hidden;   
+}
+
+.select::after{
+    content: "\25BC";
+    pointer-events:none;
+    position:absolute;
+    top: 0;
+    right: 0;
+    color: white;
+    background-color: orange;
+    border: 1px solid #f3f3f3;
+    padding: 0.3rem 0.3rem;
+    transition: all 0.6 ease;
+}
+
+.select:hover::after{
+    background-color: white;
+    color: orange;
+}
 

@@ -14,15 +14,25 @@
         <div id="content">
             <h1 id="content-header">TO DO LIST</h1>
          <form id="content-form">
-            <input type="text" name="" id="content-text" placeholder="Görev giriniz...">
+            <input type="text" name="" id="content-input" placeholder="Görev giriniz...">
             <button id="content-button">Ekle</button>
+
+
+            <div class="select">
+                <select name="todos" id="filter-to-do">
+                    <option value="all">All</option>
+                    <option value="completed">Completed</option>
+                    <option value="onprogress">On Progress</option>
+                </select>
+
+            </div>
+
          </form>
     
         </div>
 
         <div class="list-part">
             <ul id="content-list">
-        
             </ul>
         </div>
     </main>
